@@ -5,19 +5,19 @@ import java.time.LocalDate;
 import com.devsuperior.dsvendas.entities.Sale;
 
 public class SaleDTO {
-	
+
 	private Long id;
 	private Integer visited;
-	private String deals;
+	private Integer deals;
 	private Double amount;
 	private LocalDate date;
-
+	
 	private SellerDTO seller;
 	
 	public SaleDTO() {
 	}
 
-	public SaleDTO(Long id, Integer visited, String deals, Double amount, LocalDate date, SellerDTO seller) {
+	public SaleDTO(Long id, Integer visited, Integer deals, Double amount, LocalDate date, SellerDTO seller) {
 		this.id = id;
 		this.visited = visited;
 		this.deals = deals;
@@ -51,11 +51,11 @@ public class SaleDTO {
 		this.visited = visited;
 	}
 
-	public String getDeals() {
+	public Integer getDeals() {
 		return deals;
 	}
 
-	public void setDeals(String deals) {
+	public void setDeals(Integer deals) {
 		this.deals = deals;
 	}
 
@@ -82,5 +82,4 @@ public class SaleDTO {
 	public void setSeller(SellerDTO seller) {
 		this.seller = seller;
 	}
-	
 }

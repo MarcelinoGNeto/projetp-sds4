@@ -13,12 +13,12 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_sales")
 public class Sale {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Integer visited;
-	private String deals;
+	private Integer deals;
 	private Double amount;
 	private LocalDate date;
 	
@@ -29,7 +29,7 @@ public class Sale {
 	public Sale() {
 	}
 
-	public Sale(Long id, Integer visited, String deals, Double amount, LocalDate date, Seller seller) {
+	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
 		this.id = id;
 		this.visited = visited;
 		this.deals = deals;
@@ -54,11 +54,11 @@ public class Sale {
 		this.visited = visited;
 	}
 
-	public String getDeals() {
+	public Integer getDeals() {
 		return deals;
 	}
 
-	public void setDeals(String deals) {
+	public void setDeals(Integer deals) {
 		this.deals = deals;
 	}
 
@@ -85,5 +85,4 @@ public class Sale {
 	public void setSeller(Seller seller) {
 		this.seller = seller;
 	}
-
 }
